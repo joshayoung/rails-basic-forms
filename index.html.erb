@@ -1,0 +1,6 @@
+<%= link_to('New', new_fbasic_path) %>
+<% @fbasics.each do |f| %>
+  <%= link_to f.name, edit_fbasic_path(f.id) %>
+  <%= link_to 'Edit', edit_fbasic_path(f.id) %>
+  <%= link_to('Delete', f, method: :delete, data: { confirm: 'Click "OK" to proceed.'}) %>
+<% end %>
